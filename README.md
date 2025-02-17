@@ -12,6 +12,8 @@
 - [Links](#links)
 - [Continuous Development](#continuous-development)
 
+---
+
 ## Overview
 
 This project implements a student registration form for Jomacs IT Solutions. The form features modern design elements, custom form controls, and responsive layout while maintaining semantic HTML structure and accessibility.
@@ -29,6 +31,8 @@ Create a registration form with the following requirements:
   - Responsive design
   - Form validation
   - Reset functionality
+
+---
 
 ## Solution
 
@@ -67,6 +71,8 @@ Integrated Boxicons for form field indicators:
   </span>
 </p>
 ```
+
+---
 
 ### CSS Styling
 
@@ -135,6 +141,8 @@ Implemented custom radio buttons and checkboxes:
 }
 ```
 
+---
+
 ## Result
 
 ![alt text](img/image.png)
@@ -166,6 +174,8 @@ Future improvements planned:
 - Implement form data persistence
 
 ---
+
+## How to Contribute
 
 For a more detailed explanation of any section or to contribute to this project, please feel free to:
 
