@@ -84,7 +84,7 @@ fieldset {
 }
 
 legend {
-  color: --secondary-bg-color;
+  color: var(--secondary-bg-color);
   padding: 0 .5rem;
 }
 
