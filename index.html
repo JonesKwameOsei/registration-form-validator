@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is an HTML form for Jomacs IT and Solutions to handle member registration system.">
+  <meta name="author" content="Jones Osei">
+  <title>Jomancs Registration Form</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <main class="container">
+    <section class="hero">
+      <img src="img/pexels-goumbik-574080.jpg" alt=""  class="image" width="400" height="auto">
+    </section>
+
+    <section class="formContent">
+      <form class="form" action="" method="post">
+        <caption class="caption">Student Registration Form</caption>
+        
+        <fieldset>
+          <legend>Personal Information</legend>
+          <p class="formField">
+            <label for="fname">Full Name</label>
+            <span class="inputWrapper">
+              <input type="text" id="fname" name="fname" placeholder="Full Name" required>
+              <i class="bx bxs-user"></i>
+            </span>
+          </p>
+          <p class="formField">
+            <label for="email">Email</label>
+            <span class="inputWrapper">
+              <input type="email" id="email" name="email" placeholder="Email" required>
+              <i class="bx bxs-envelope"></i>
+            </span>
+          </p>
+          <p class="formField">
+            <label for="password">Password</label>
+            <span class="inputWrapper">
+              <input type="password" id="password" name="password" placeholder="Password" required>
+              <i class="bx bxs-lock-alt"></i>
+            </span>
+          </p>
+          <p class="formField">
+            <label for="phone">Phone</label>
+            <span class="inputWrapper">
+              <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+              <i class="bx bxs-contact"></i>
+            </span>
+          </p>
+          <label for="DOB">Date of Birth</label>
+          <input type="date" id="DOB" name="DOB" required>
+          <br>
+          <label for="gender">Gender</label>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label>
+          <br>
+          <label for="address">Address</label>
+          <textarea id="address" name="address" placeholder="Address" required></textarea>
+        </fieldset>
+        <br>
+        <label for="membership">Membership Type</label>
+        <select id="membership" name="membership" required>
+          <option value="regular">Regular</option>
+          <option selected value="associate">Associate</option>
+          <option value="visitor">Visitor</option>
+        </select>
+        <br>
+        <label for="newsletter">Newsletter Subscription</label>
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
