@@ -137,7 +137,7 @@ Implemented custom radio buttons and checkboxes:
 
 ## Result
 
-![alt text](image.png)
+![alt text](img/image.png)
 
 ## Challenges Faced
 
