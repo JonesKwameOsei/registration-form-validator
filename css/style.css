@@ -7,6 +7,8 @@
   --secondary-bg-color: #3aa76d;
   --primary-text-color: #f5f5f5;
   --padding: 2rem;
+  --padding-mediaquery: 0.5rem;
+  --shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Reset CSS */
@@ -36,9 +38,13 @@ main.container {
   padding: var(--padding);
 }
 
-section.formContent {
+.formContent {
   width: 100%;
   max-width: 500px;
+  margin: 1rem auto;
+  height: auto;
+  max-height: 100vh;
+  /* overflow-y: auto; */
 }
 
 .form {
@@ -46,17 +52,17 @@ section.formContent {
   backdrop-filter: blur(10px);
   padding: var(--padding);
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow);
 }
 
 .formTitle {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
   font-weight: 600;
   text-align: center;
   margin-bottom: 1.5rem;
   color: var(--primary-text-color);
   position: relative;
-  width: max-content;
+  width: 100%;
 }
 
 
@@ -85,7 +91,7 @@ fieldset {
 
 legend {
   color: var(--secondary-bg-color);
-  padding: 0 .5rem;
+  padding: var(--padding-mediaquery);
 }
 
 .formField {
@@ -315,19 +321,85 @@ input[type="reset"]:hover {
 
 /* Responsive  Design */
 @media (max-width: 768px) {
+  :root {
+    --padding: 1rem;
+  }
+
   main.container {
-    flex-direction: column;
-    padding: 1rem;
+    /* flex-direction: column; */
+    padding: var(--padding-mediaquery);
   }
 
   .form {
     padding: 1rem;
   }
 
+  fieldset {
+    padding: .75rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"],
+  textarea,
+  select {
+    padding: var(--padding-mediaquery);
+    padding-right: 2rem;
+    font-size: 16px;
+  }
+
   .radioGroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  input[type="date"] {
+    min-height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: .75rem;
+  }
+
+  fieldset {
+    padding: var(--padding-mediaquery);
+  }
+
+  .formTitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .formField {
+    margin-bottom: .75rem;
+  }
+
+  .buttonGroup {
     flex-direction: column;
     gap: .5rem;
   }
 }
 
+/* iPhone specific fixes */
+@supports (-webkit-touch-callout: none) {
+  input[type="date"] {
+    min-height: 2.5rem;
+  }
 
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+} 
