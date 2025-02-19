@@ -18,11 +18,12 @@
 
 <body>
 
+  <!-- Navigation Bar -->
   <main class="container">
     <section class="formContent">
       <form class="form" action="https://httpbin.org/post" method="post">
         <h1 class="formTitle">Jomacs Student Registration Form</h1>
-        <fieldset>
+        <>
           <legend>Personal Information</legend>
           <p class="formField">
             <label for="fname">Full Name</label>
@@ -31,7 +32,8 @@
               <i class="bx bxs-user"></i>
             </span>
           </p>
-
+           
+          <!--  Email  -->
           <p class="formField">
             <label for="email">Email</label>
             <span class="inputWrapper">
@@ -40,6 +42,7 @@
             </span>
           </p>
 
+          <!--  Password  -->
           <p class="formField">
             <label for="password">Password</label>
             <span class="inputWrapper">
@@ -47,7 +50,8 @@
               <i class="bx bxs-lock-alt"></i>
             </span>
           </p>
-
+          
+          <!-- Phone Number -->
           <p class="formField">
             <label for="phone">Phone</label>
             <span class="inputWrapper">
@@ -110,5 +114,6 @@
       </form>
     </section>
   </main>
+  <script src="validation.js"></script>
 </body>
 </html>
